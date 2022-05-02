@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/protickr/natours-practice/issues"
   },
-  "homepage": "https://github.com/protickr/natours-practice#readme"
+  "homepage": "https://github.com/protickr/natours-practice#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
 }
