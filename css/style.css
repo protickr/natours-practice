@@ -440,7 +440,7 @@ body {
     display: table;
     border-radius: 3px;
     overflow: hidden;
-    transition: all 0.3s 0.2s; }
+    transition: all 0.3s 0.2s cubic-bezier(0.85, 0, 0.15, 1); }
   .popup__left {
     display: table-cell;
     width: 33.333333%; }
