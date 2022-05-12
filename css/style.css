@@ -1,3 +1,25 @@
+/*
+0 - 600px: phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet landscape
+1200 - 1800px: where normal styles apply
+1800px + : big desktop
+
+$breakpoint argument choices: 
+- phone 
+- tab-port
+- tab-land
+- big-desktop
+
+by default 1em == 16px that is set by user agent stylesheet
+    600 / 16 = 37.5em
+    900 / 16 = 56.25em
+    1200 / 16 = 75em
+    1800 / 16 = 112.5em
+
+ORDER: base + typography > general layout: header footer navigation + grid > page layout > components
+
+*/
 @keyframes moveInFromLeft {
   0% {
     opacity: 0;
@@ -34,7 +56,23 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  /*
+    // commented out because we do not want our design to scale down automatically for mobile devies
+    @include respond(phone){ 
+        //width <= 600px or 37.5em, we want 1rem == 5px so, 5 / 16 * 100 = 31.25%; 
+        font-size: 31.25%;
+    }
+*/ }
+  @media screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
