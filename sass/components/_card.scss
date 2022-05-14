@@ -153,8 +153,10 @@
 
 
 
-    // responsive styling for 600px - 900px
-    @include respond(tab-port) {
+    // responsive styling for <= 900px
+    //@include respond(tab-port) {
+    @media only screen and (max-width: 56.25em), 
+           only screen and (hover: none) {
         //functionality
         height: auto;
         background-color: $color-white;
